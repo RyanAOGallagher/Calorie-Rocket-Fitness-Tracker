@@ -1,0 +1,42 @@
+/* Black Footer Bar */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Wrapper to Keep Icons and Button Centered */
+  .footer-content {
+    display: flex;
+    align-items: center;
+    gap: 70px; /* Adjust space between elements */
+  }
+  
+  /* Left & Right Icons */
+  .footer-icon {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Center Circular Button */
+  .footer-button {
+    width: 50px;
+    height: 50px;
+    background-color: #00F9C7;
+    color: white;
+    border: none;
+    border-radius: 20%; /* Make it a circle */
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  

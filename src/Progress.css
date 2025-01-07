@@ -1,0 +1,31 @@
+.progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 5%;
+    margin: 10px;
+  }
+  
+  .small-progress {
+    width: 80px; /* Smaller size */
+    text-align: center;
+  }
+  
+  .big-progress {
+    width: 140px; /* Larger center size */
+    text-align: center;
+  }
+  
+  /* Clickable effect for Exercise Progress */
+  .clickable {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .clickable:hover {
+    transform: scale(1.1);
+  }
+  

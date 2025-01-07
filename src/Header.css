@@ -1,0 +1,43 @@
+/* Header Container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: white;
+  color: black;
+  font-family: "Pretendard-Regular", sans-serif;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Navigation Buttons */
+.nav-button {
+  background-color: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #00F9C7;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+/* Date Text (Centered) */
+.date-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: black;
+  text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* Profile Icon (Aligned Right) */
+.profile-icon {
+  cursor: pointer;
+  color: #2E5077;
+  transition: color 0.2s ease;
+}
+
+.profile-icon:hover {
+  color: #007bff;
+}
