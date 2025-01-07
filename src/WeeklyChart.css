@@ -1,0 +1,8 @@
+/* Container for Chart */
+.chart-container {
+    padding-bottom: 80px; /* Extra space for footer */
+    margin: 20px auto;
+    width: 90%;
+    max-width: 500px;
+  }
+  

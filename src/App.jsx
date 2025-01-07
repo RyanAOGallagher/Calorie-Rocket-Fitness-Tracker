@@ -5,6 +5,7 @@ import Progress from './Progress'
 import Food from './Food'
 import Footer from './Footer'
 import Header from './Header'
+import WeeklyChart from './WeeklyChart'
 
 function App() {
 
@@ -14,8 +15,7 @@ function App() {
       <Weight/>
       <Progress/>
       <Food/>
-      <Food/>
-      
+      <WeeklyChart/>
       <Footer/>
     </>
   )

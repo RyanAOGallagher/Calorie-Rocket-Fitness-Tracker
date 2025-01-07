@@ -32,7 +32,9 @@ const Header = () => {
       <button className="nav-button" onClick={previousDay}>⬅</button>
       <h2 className="date-text">{getFormattedDate(selectedDate)}</h2>
       <button className="nav-button" onClick={nextDay}>➡</button>
-  
+      {/* <div className="profile-icon">
+        <FaUserCircle size={42} />
+      </div> */}
     </header>
   );
 };

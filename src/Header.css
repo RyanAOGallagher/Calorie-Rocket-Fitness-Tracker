@@ -2,13 +2,21 @@
 .header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   padding: 15px 30px;
   background: white;
   color: black;
   font-family: "Pretendard-Regular", sans-serif;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
   position: relative;
+  gap: 10px; /* Reduce space between elements */
+}
+
+/* Date Container */
+.date-container {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Controls spacing between arrows and date */
 }
 
 /* Navigation Buttons */
@@ -21,23 +29,18 @@
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
-/* Date Text (Centered) */
+/* Date Text */
 .date-text {
   font-size: 1.8rem;
   font-weight: bold;
   color: black;
   text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
-  flex-grow: 1;
-  text-align: center;
 }
 
-/* Profile Icon (Aligned Right) */
+/* Profile Icon (Top Right Corner) */
 .profile-icon {
+  position: absolute;
+  top: 10px;
+  left: 20px;
   cursor: pointer;
-  color: #2E5077;
-  transition: color 0.2s ease;
-}
-
-.profile-icon:hover {
-  color: #007bff;
 }
