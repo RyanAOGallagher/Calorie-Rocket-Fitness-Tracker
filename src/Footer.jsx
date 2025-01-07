@@ -26,7 +26,7 @@ const Footer = () => {
           <h2>Available Foods</h2>
           <ul>
             <li>Kimbap - 200 kcal - 3g protein</li>
-            <li>Cupbap - 1500 kcal - 30g protein</li>
+            <li>Cupbap - 1500 kcal - 30g protein!</li>
           </ul>
           <button className="close-button" onClick={handleClose}>Add Food</button>
           <button className="close-button" onClick={handleClose}>Close</button>
