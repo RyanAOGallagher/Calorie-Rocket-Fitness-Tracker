@@ -25,11 +25,10 @@ const Footer = () => {
         <div className="food-list-content">
           <h2>Available Foods</h2>
           <ul>
-            <li>Chicken Breast - 200 kcal - 30g protein</li>
-            <li>Rice - 150 kcal - 3g protein</li>
-            <li>Broccoli - 50 kcal - 5g protein</li>
-            <li>Protein Shake - 120 kcal - 25g protein</li>
+            <li>Kimbap - 200 kcal - 3g protein</li>
+            <li>Cupbap - 1500 kcal - 30g protein</li>
           </ul>
+          <button className="close-button" onClick={handleClose}>Add Food</button>
           <button className="close-button" onClick={handleClose}>Close</button>
         </div>
       </ActionSheet>
