@@ -1,19 +1,28 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Progress.css"; // Import external CSS
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
+import { fetchDailyFoodLog } from "./firebase"; // Import Firestore function
 
 const Progress = () => {
   const [exercise, setExercise] = useState(0);
   const [calories, setCalories] = useState(0);
   const [protein, setProtein] = useState(0);
+  const today = new Date().toISOString().split("T")[0]; // Current date
 
-  // Clicking on Exercise Circle increases exercise count, updates calories & protein
+  useEffect(() => {
+    fetchDailyFoodLog(today).then((foodData) => {
+      const totalCalories = foodData.reduce((sum, item) => sum + Number(item.calories), 0); // Convert to number
+      const totalProtein = foodData.reduce((sum, item) => sum + Number(item.protein), 0); // Convert to number
+      setCalories(totalCalories);
+      setProtein(totalProtein);
+    });
+  }, []);
+
+  // Clicking on Exercise Circle increases exercise count
   const increaseExercise = () => {
     if (exercise < 10) {
       setExercise(exercise + 1);
-      setCalories(calories + 300); // Each exercise burns 300 kcal
-      setProtein(protein + 20); // Each exercise contributes to 20g protein
     }
   };
 

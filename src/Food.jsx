@@ -1,18 +1,19 @@
-import React, { useState } from "react";
-import "./Food.css"; // Import external CSS file
+import React, { useState, useEffect } from "react";
+import "./Food.css"; // Import external CSS
+import { fetchDailyFoodLog, deleteFoodFromDailyLog } from "./firebase"; // Firestore functions
 
 const Food = () => {
-  // State to manage food data
-  const [foodData, setFoodData] = useState([
-    { id: 1, food: "Chicken Breast", calories: 200, protein: 30 },
-    { id: 2, food: "Rice", calories: 150, protein: 3 },
-    { id: 3, food: "Broccoli", calories: 50, protein: 5 },
-    { id: 4, food: "Protein Shake", calories: 120, protein: 25 },
-  ]);
+  const [foodData, setFoodData] = useState([]); // State for today's food log
+  const today = new Date().toISOString().split("T")[0]; // Get current date
 
-  // Function to delete a food item
-  const deleteFood = (id) => {
-    setFoodData(foodData.filter((item) => item.id !== id));
+  useEffect(() => {
+    fetchDailyFoodLog(today).then(setFoodData); // Load today's food log from Firestore
+  }, []);
+
+  // 🔹 Function to delete a food item from Firestore
+  const deleteFood = async (id) => {
+    await deleteFoodFromDailyLog(today, id); // Remove from Firestore
+    setFoodData(foodData.filter((item) => item.id !== id)); // Update UI
   };
 
   return (
@@ -27,18 +28,20 @@ const Food = () => {
           </tr>
         </thead>
         <tbody>
-          {foodData.map((item) => (
-            <tr key={item.id}>
-              <td>{item.food}</td>
-              <td>{item.calories}</td>
-              <td>{item.protein}</td>
-              <td>
-                <button className="delete-button" onClick={() => deleteFood(item.id)}>
-                  ✖
-                </button>
-              </td>
-            </tr>
-          ))}
+          {foodData.length === 0 ? (
+            <tr><td colSpan="4">No food logged for today</td></tr>
+          ) : (
+            foodData.map((item) => (
+              <tr key={item.id}>
+                <td>{item.name}</td>
+                <td>{item.calories}</td>
+                <td>{item.protein}</td>
+                <td>
+                  <button className="delete-button" onClick={() => deleteFood(item.id)}>✖</button>
+                </td>
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </div>

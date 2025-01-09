@@ -1,42 +1,136 @@
-/* Black Footer Bar */
+/* Footer Bar */
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background-color: whitesmoke;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  /* Wrapper to Keep Icons and Button Centered */
-  .footer-content {
-    display: flex;
-    align-items: center;
-    gap: 70px; /* Adjust space between elements */
-  }
-  
-  /* Left & Right Icons */
-  .footer-icon {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 32px;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.2s ease;
-  }
-  
-  /* Center Circular Button */
-  .footer-button {
-    width: 50px;
-    height: 50px;
-    background-color: #00F9C7;
-    color: white;
-    border: none;
-    border-radius: 20%; /* Make it a circle */
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Center Floating Button */
+.footer-button {
+  width: 60px;
+  height: 60px;
+  background-color: #00F9C7;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s ease;
+}
+
+.footer-button:hover {
+  background-color: #00D4A6;
+  transform: scale(1.1);
+}
+
+/* Food List Content */
+.food-list-content {
+  width: 100%;
+  height: 80%;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+/* Food List */
+.food-list-content ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.food-list-content li {
+  padding: 10px;
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Buttons for Edit and Delete */
+.edit-button, .delete-button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.edit-button:hover {
+  color: #007bff;
+}
+
+.delete-button:hover {
+  color: red;
+}
+
+/* Food Input Form (Inline Layout) */
+.food-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+  width: 100%;
+  max-width: 500px;
+}
+
+/* Input Fields (Same Height & Aligned) */
+.food-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center; /* Keeps text aligned */
+  width: 100px; /* Ensures equal spacing */
+}
+
+/* Save Button (Same Height as Inputs) */
+.save-button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  height: 42px; /* Match input height */
+  min-width: 50px; /* Prevent button from shrinking too much */
+}
+
+.save-button:hover {
+  background-color: #0056b3;
+}
+
+/* Close Button */
+.close-button {
+  margin-top: 20px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.close-button:hover {
+  background-color: #0056b3;
+}

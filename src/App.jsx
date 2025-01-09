@@ -8,7 +8,6 @@ import Header from './Header'
 import WeeklyChart from './WeeklyChart'
 
 function App() {
-
   return (
     <>
       <Header/>
