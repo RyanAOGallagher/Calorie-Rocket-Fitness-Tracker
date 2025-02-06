@@ -4,7 +4,7 @@ A fitness tracking web application that allows users to log their weight, track 
 
 ---
 
-## **🌟 Features**
+## **Features**
 - **Weight Tracking**: Log and save your daily weight with a simple input system. Previously entered weights are displayed and cannot be edited.
 - **Calorie & Protein Tracking**: Automatically calculates total calories and protein from the food you log.
 - **Exercise Progress**: Visualize your daily exercise progress through interactive progress circles.
@@ -16,7 +16,7 @@ A fitness tracking web application that allows users to log their weight, track 
 
 ---
 
-## **🛠️ Tech Stack**
+## **Tech Stack**
 - **Frontend**: React
 - **Backend**: Firebase (Firestore Database)
 - **Styling**: CSS
