@@ -1,4 +1,4 @@
-# **Daily Fitness Tracker**
+# **Calorie Rocket Fitness Tracker 🚀**
 
 A fitness tracking web application that allows users to log their weight, track daily calorie and protein intake, monitor exercise progress, and manage food items. Built using **React**, **Firebase**, and **React Circular Progressbar**, this app is designed to make fitness tracking seamless and intuitive.
 
